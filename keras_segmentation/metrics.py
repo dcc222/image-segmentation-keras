@@ -9,4 +9,4 @@ def get_iou( gt , pr , n_classes ):
 		union = np.sum(np.maximum( ( gt == cl ) , ( pr == cl ) ))
 		iou = float(intersection)/( union + EPS )
 		class_wise[ cl ] = iou
-	return class_wise
+	return class_wise#返回的为每个类别的iou的数组
