@@ -118,7 +118,7 @@ def evaluate( model=None , inp_inmges=None , annotations=None , checkpoints_path
 		iou = metrics.get_iou( gt , pr , model.n_classes )
 		ious.append( iou )
 	ious = np.array( ious )
-	print("Class wise IoU "  ,  np.mean(ious , axis=0 ))
-	print("Total  IoU "  ,  np.mean(ious ))
+	print("Class wise IoU "  ,  np.mean(ious , axis=0 ))#这边预测的时候打印了每一类的miou
+	print("Total  IoU "  ,  np.mean(ious ))#这边预测的时候打印了总的类别的平均的iou,即MIOU
 
 
